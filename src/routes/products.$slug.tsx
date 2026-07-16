@@ -74,7 +74,7 @@ function ProductDetail() {
               Typical uses
             </h2>
             <ul className="mt-3 grid gap-2 sm:grid-cols-2">
-              {product.uses.map((u) => (
+              {product.uses.map((u: string) => (
                 <li key={u} className="flex items-center gap-2 text-sm text-foreground">
                   <CheckCircle2 className="h-4 w-4 text-accent" /> {u}
                 </li>
