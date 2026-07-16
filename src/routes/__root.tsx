@@ -86,12 +86,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:site_name", content: "Shelta Packaging Ltd" },
       { property: "og:type", content: "website" },
-      { property: "og:title", content: "Shelta Packaging Ltd" },
+      { property: "og:title", content: "Shelta Packaging Ltd — Strong Packaging. Solid Partnerships." },
       {
         property: "og:description",
-        content: "Strong Packaging. Solid Partnerships. Corrugated cartons and packaging solutions in Kenya.",
+        content: "Shelta Packaging Ltd manufactures durable corrugated cartons, die-cut boxes, horticulture packaging and industrial cartons in Ruiru, Kenya.",
       },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Shelta Packaging Ltd — Strong Packaging. Solid Partnerships." },
+      { name: "twitter:description", content: "Shelta Packaging Ltd manufactures durable corrugated cartons, die-cut boxes, horticulture packaging and industrial cartons in Ruiru, Kenya." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4bf747ac-c28f-4fb6-b8e6-e17e760c08d8/id-preview-5c5b51c6--576ff03e-a108-46ea-86d5-ee045e415b4e.lovable.app-1784183680444.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4bf747ac-c28f-4fb6-b8e6-e17e760c08d8/id-preview-5c5b51c6--576ff03e-a108-46ea-86d5-ee045e415b4e.lovable.app-1784183680444.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
