@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Leaf, Truck, Sparkles, Factory } from "lucide-react";
+import { ArrowRight, ShieldCheck, Leaf, Truck, Sparkles, Factory, Building2, BadgeCheck, Globe2 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg.asset.json";
 import factoryImg from "@/assets/factory.jpg.asset.json";
 import { products } from "@/lib/products";
@@ -17,6 +17,24 @@ const industries = [
   "Custom Branded",
 ];
 
+const capabilities = [
+  {
+    icon: Building2,
+    label: "State-of-the-Art Facility",
+    body: "High-volume production capacity based in Ruiru–Mugutha, ensuring timely delivery nationwide.",
+  },
+  {
+    icon: BadgeCheck,
+    label: "Quality Assurance",
+    body: "Rigorous edge-crush and burst-strength testing to meet industry compliance and standards.",
+  },
+  {
+    icon: Globe2,
+    label: "Sustainable Materials",
+    body: "Committed to eco-friendly, recyclable Kraft paper solutions for a greener supply chain.",
+  },
+];
+
 const values = [
   { icon: ShieldCheck, label: "Built to protect", body: "Engineered strength across every ply." },
   { icon: Truck, label: "Delivered on time", body: "Reliable schedules from Ruiru." },
@@ -28,52 +46,66 @@ function HomePage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative overflow-hidden bg-background">
+        <div className="absolute inset-0 opacity-30">
           <img
             src={heroImg.url}
-            alt="Warehouse stacked with corrugated cartons"
-            width={1600}
-            height={1100}
+            alt=""
+            aria-hidden
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/40" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-36">
-          <div className="max-w-3xl text-primary-foreground">
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/25 bg-primary-foreground/10 px-3 py-1 text-xs uppercase tracking-widest">
-              <Factory className="h-3 w-3" /> Corrugated carton manufacturer · Kenya
+        <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
+          <div className="mx-auto max-w-4xl text-center text-foreground">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+              <Factory className="h-3.5 w-3.5" /> East Africa's Trusted Manufacturer
             </span>
-            <h1 className="mt-6 font-display text-5xl leading-[1.05] md:text-7xl">
-              Strong Packaging.
+            <div className="mx-auto mt-3 h-px w-24 bg-accent/60" />
+            <h1 className="mt-8 font-display text-5xl leading-[1.02] md:text-7xl">
+              Industrial Strength.
               <br />
-              <span className="text-accent">Solid Partnerships.</span>
+              <span className="text-accent">Precision Packaging.</span>
             </h1>
-            <p className="mt-6 max-w-xl text-lg text-primary-foreground/85">
-              Shelta Packaging Ltd designs and manufactures durable corrugated cartons for
-              horticulture, food, pharma and industry — engineered to protect what matters and
-              carry your brand with confidence.
+            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
+              Delivering durable, cost-effective corrugated packaging solutions designed to
+              protect your products, enhance your brand, and optimize your supply chain.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-accent px-5 py-3 text-sm font-medium text-accent-foreground transition-colors hover:bg-accent/90"
-              >
-                Request a Quote <ArrowRight className="h-4 w-4" />
-              </Link>
+            <div className="mt-9 flex flex-wrap justify-center gap-3">
               <Link
                 to="/products"
-                className="inline-flex items-center rounded-md border border-primary-foreground/30 bg-primary-foreground/5 px-5 py-3 text-sm font-medium text-primary-foreground backdrop-blur hover:bg-primary-foreground/15"
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
               >
-                View products
+                View Capabilities <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-flex items-center rounded-md border border-foreground/30 px-6 py-3 text-sm font-semibold text-foreground hover:bg-foreground/5"
+              >
+                Contact Sales
               </Link>
             </div>
+          </div>
+
+          {/* Capability cards */}
+          <div className="mt-16 grid gap-4 rounded-xl border border-border bg-card/95 p-6 shadow-2xl backdrop-blur md:mt-20 md:grid-cols-3 md:gap-8 md:p-8">
+            {capabilities.map(({ icon: Icon, label, body }) => (
+              <div key={label} className="flex gap-4">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-md border border-border text-accent">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="font-display text-lg text-foreground">{label}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{body}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Trust strip */}
-      <section className="border-b border-border/60 bg-muted/50">
+      <section className="border-y border-border/60 bg-muted/40">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 py-6 text-xs uppercase tracking-[0.2em] text-muted-foreground md:px-8">
           {industries.map((i) => (
             <span key={i} className="inline-flex items-center gap-2">
