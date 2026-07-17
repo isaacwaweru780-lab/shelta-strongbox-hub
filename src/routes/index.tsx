@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, ShieldCheck, Leaf, Truck, Sparkles, Factory } from "lucide-react";
+import { ArrowRight, ShieldCheck, Leaf, Truck, Sparkles, Factory, Building2, BadgeCheck, Globe2 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg.asset.json";
 import factoryImg from "@/assets/factory.jpg.asset.json";
 import { products } from "@/lib/products";
@@ -15,6 +15,24 @@ const industries = [
   "Industrial",
   "FMCG",
   "Custom Branded",
+];
+
+const capabilities = [
+  {
+    icon: Building2,
+    label: "State-of-the-Art Facility",
+    body: "High-volume production capacity based in Ruiru–Mugutha, ensuring timely delivery nationwide.",
+  },
+  {
+    icon: BadgeCheck,
+    label: "Quality Assurance",
+    body: "Rigorous edge-crush and burst-strength testing to meet industry compliance and standards.",
+  },
+  {
+    icon: Globe2,
+    label: "Sustainable Materials",
+    body: "Committed to eco-friendly, recyclable Kraft paper solutions for a greener supply chain.",
+  },
 ];
 
 const values = [
