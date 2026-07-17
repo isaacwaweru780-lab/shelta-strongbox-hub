@@ -54,47 +54,46 @@
 
 :root {
   --radius: 0.375rem;
-  /* Dark editorial palette inspired by brand — near-black surfaces, tan accent, maroon signal */
-  --background: oklch(0.14 0.008 45);
-  --foreground: oklch(0.96 0.01 80);
-  --card: oklch(0.19 0.012 45);
-  --card-foreground: oklch(0.96 0.01 80);
-  --popover: oklch(0.19 0.012 45);
-  --popover-foreground: oklch(0.96 0.01 80);
-  /* Deep espresso primary — used for CTA blocks */
-  --primary: oklch(0.28 0.04 45);
-  --primary-foreground: oklch(0.97 0.02 80);
-  /* Maroon signal (from logo) */
-  --secondary: oklch(0.42 0.13 25);
+  /* Business-card palette: white surfaces, maroon primary, orange accent, dark brown text */
+  --background: oklch(0.995 0.002 80);
+  --foreground: oklch(0.22 0.02 40);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.02 40);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.02 40);
+  /* Maroon primary (from card) */
+  --primary: oklch(0.42 0.14 25);
+  --primary-foreground: oklch(0.98 0.01 80);
+  /* Deep brown secondary */
+  --secondary: oklch(0.32 0.03 40);
   --secondary-foreground: oklch(0.98 0.01 80);
-  --muted: oklch(0.24 0.012 45);
-  --muted-foreground: oklch(0.72 0.015 70);
-  /* Tan / kraft gold accent (from logo + reference) */
-  --accent: oklch(0.74 0.09 70);
-  --accent-foreground: oklch(0.18 0.02 45);
+  --muted: oklch(0.96 0.008 70);
+  --muted-foreground: oklch(0.48 0.02 40);
+  /* Orange accent (from card wave) */
+  --accent: oklch(0.72 0.16 55);
+  --accent-foreground: oklch(0.2 0.02 40);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.98 0.01 80);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.74 0.09 70);
-  /* Named brand tokens */
-  --kraft: oklch(0.74 0.09 70);
-  --cocoa: oklch(0.28 0.04 45);
-  --cream: oklch(0.96 0.02 80);
-  --maroon: oklch(0.42 0.13 25);
-  --chart-1: oklch(0.74 0.09 70);
-  --chart-2: oklch(0.42 0.13 25);
+  --border: oklch(0.9 0.01 60);
+  --input: oklch(0.9 0.01 60);
+  --ring: oklch(0.42 0.14 25);
+  --kraft: oklch(0.72 0.16 55);
+  --cocoa: oklch(0.32 0.03 40);
+  --cream: oklch(0.98 0.01 80);
+  --maroon: oklch(0.42 0.14 25);
+  --chart-1: oklch(0.42 0.14 25);
+  --chart-2: oklch(0.72 0.16 55);
   --chart-3: oklch(0.55 0.09 55);
   --chart-4: oklch(0.85 0.06 75);
-  --chart-5: oklch(0.28 0.04 45);
-  --sidebar: oklch(0.19 0.012 45);
-  --sidebar-foreground: oklch(0.96 0.01 80);
-  --sidebar-primary: oklch(0.74 0.09 70);
-  --sidebar-primary-foreground: oklch(0.18 0.02 45);
-  --sidebar-accent: oklch(0.24 0.012 45);
-  --sidebar-accent-foreground: oklch(0.96 0.01 80);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.74 0.09 70);
+  --chart-5: oklch(0.32 0.03 40);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.22 0.02 40);
+  --sidebar-primary: oklch(0.42 0.14 25);
+  --sidebar-primary-foreground: oklch(0.98 0.01 80);
+  --sidebar-accent: oklch(0.96 0.008 70);
+  --sidebar-accent-foreground: oklch(0.22 0.02 40);
+  --sidebar-border: oklch(0.9 0.01 60);
+  --sidebar-ring: oklch(0.42 0.14 25);
 }
 
 .dark {
