@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, Package } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import mark from "@/assets/shelta-mark.png.asset.json";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -17,9 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-8">
         <Link to="/" className="flex items-center gap-2.5 group">
-          <span className="grid h-9 w-9 place-items-center rounded-md bg-primary text-primary-foreground">
-            <Package className="h-4.5 w-4.5" strokeWidth={2.25} />
-          </span>
+          <img src={mark.url} alt="" className="h-10 w-10 object-contain" />
           <span className="flex items-baseline font-display text-lg tracking-tight text-foreground">
             <span className="font-semibold">SHELTA</span>
             <span className="font-semibold text-accent">PACKAGING</span>
