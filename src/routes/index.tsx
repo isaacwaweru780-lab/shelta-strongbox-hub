@@ -54,34 +54,36 @@ function HomePage() {
             aria-hidden
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
-          <div className="mx-auto max-w-4xl text-center text-foreground">
-            <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.28em] text-accent">
+          <div className="mx-auto max-w-4xl text-center text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.55)]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-accent ring-1 ring-white/15 backdrop-blur">
               <Factory className="h-3.5 w-3.5" /> East Africa's Trusted Manufacturer
             </span>
-            <div className="mx-auto mt-3 h-px w-24 bg-accent/60" />
-            <h1 className="mt-8 font-display text-5xl leading-[1.02] md:text-7xl">
+            <div className="mx-auto mt-3 h-px w-24 bg-accent/80" />
+            <h1 className="mt-8 font-display text-5xl font-semibold leading-[1.02] text-white md:text-7xl">
+
               Industrial Strength.
               <br />
               <span className="text-accent">Precision Packaging.</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base text-white/90 md:text-lg [text-shadow:0_1px_8px_rgba(0,0,0,0.5)]">
               Delivering durable, cost-effective corrugated packaging solutions designed to
               protect your products, enhance your brand, and optimize your supply chain.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-lg transition-colors hover:bg-accent/90"
               >
                 View Capabilities <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center rounded-md border border-foreground/30 px-6 py-3 text-sm font-semibold text-foreground hover:bg-foreground/5"
+                className="inline-flex items-center rounded-md border border-white/50 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/20"
               >
+
                 Contact Sales
               </Link>
             </div>
