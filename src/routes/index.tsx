@@ -47,14 +47,14 @@ function HomePage() {
     <div>
       {/* Hero */}
       <section className="relative overflow-hidden bg-background">
-        <div className="absolute inset-0 opacity-30">
+        <div className="absolute inset-0">
           <img
             src={heroImg.url}
             alt=""
             aria-hidden
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/85 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
           <div className="mx-auto max-w-4xl text-center text-foreground">
