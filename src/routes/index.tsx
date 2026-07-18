@@ -68,21 +68,22 @@ function HomePage() {
               <br />
               <span className="text-accent">Precision Packaging.</span>
             </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg">
+            <p className="mx-auto mt-6 max-w-2xl text-base text-white/90 md:text-lg [text-shadow:0_1px_8px_rgba(0,0,0,0.5)]">
               Delivering durable, cost-effective corrugated packaging solutions designed to
               protect your products, enhance your brand, and optimize your supply chain.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
               <Link
                 to="/products"
-                className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:bg-accent/90"
+                className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-lg transition-colors hover:bg-accent/90"
               >
                 View Capabilities <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center rounded-md border border-foreground/30 px-6 py-3 text-sm font-semibold text-foreground hover:bg-foreground/5"
+                className="inline-flex items-center rounded-md border border-white/50 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur hover:bg-white/20"
               >
+
                 Contact Sales
               </Link>
             </div>
