@@ -1,9 +1,9 @@
 import rsc from "@/assets/rsc.jpg.asset.json";
-import horticulture from "@/assets/horticulture.jpg.asset.json";
 import diecut from "@/assets/diecut.jpg.asset.json";
 import sfk from "@/assets/sfk.jpg.asset.json";
 import trays from "@/assets/trays.jpg.asset.json";
 import dividers from "@/assets/dividers.jpg.asset.json";
+
 
 
 export interface Product {
