@@ -8,7 +8,9 @@ import {
   BriefcaseBusiness,
   ArrowRight,
 } from "lucide-react";
-import factoryImg from "@/assets/factory.jpg.asset.json";
+import factoryStock from "@/assets/factory-stock.jpg.asset.json";
+import factoryLine from "@/assets/factory-line.jpg.asset.json";
+import factoryMachine from "@/assets/factory-machine.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
