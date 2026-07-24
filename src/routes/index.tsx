@@ -1,8 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, ShieldCheck, Leaf, Truck, Sparkles, Factory, Building2, BadgeCheck, Globe2 } from "lucide-react";
-import heroImg from "@/assets/hero.jpg.asset.json";
+import heroVideo from "@/assets/hero.mp4.asset.json";
+import heroPoster from "@/assets/hero-poster.jpg.asset.json";
 import factoryImg from "@/assets/factory.jpg.asset.json";
 import { products } from "@/lib/products";
+
 
 export const Route = createFileRoute("/")({
   component: HomePage,
