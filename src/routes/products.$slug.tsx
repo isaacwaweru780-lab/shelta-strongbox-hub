@@ -68,7 +68,7 @@ function ProductDetail() {
           </div>
           {gallery.length > 1 && (
             <div className="grid grid-cols-4 gap-3">
-              {gallery.map((src, i) => (
+              {gallery.map((src: string, i: number) => (
                 <button
                   key={src + i}
                   type="button"
