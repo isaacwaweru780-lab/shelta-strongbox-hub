@@ -50,13 +50,19 @@ function HomePage() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-background">
         <div className="absolute inset-0">
-          <img
-            src={heroImg.url}
-            alt=""
+          <video
+            src={heroVideo.url}
+            poster={heroPoster.url}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
             aria-hidden
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75" />
+
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 md:px-8 md:py-32">
           <div className="mx-auto max-w-4xl text-center text-white [text-shadow:0_2px_16px_rgba(0,0,0,0.55)]">
