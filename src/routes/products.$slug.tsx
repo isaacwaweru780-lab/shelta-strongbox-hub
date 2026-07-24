@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { useState } from "react";
 import { getProduct, products } from "@/lib/products";
 
 export const Route = createFileRoute("/products/$slug")({
@@ -38,6 +39,8 @@ export const Route = createFileRoute("/products/$slug")({
 function ProductDetail() {
   const { product } = Route.useLoaderData();
   const related = products.filter((p) => p.slug !== product.slug).slice(0, 3);
+  const [active, setActive] = useState(0);
+  const gallery = product.gallery?.length ? product.gallery : [product.image];
 
   return (
     <div>
@@ -53,14 +56,40 @@ function ProductDetail() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-4 pb-8 pt-6 md:grid-cols-2 md:gap-16 md:px-8 md:pb-12">
-        <div className="overflow-hidden rounded-2xl border border-border bg-card">
-          <img
-            src={product.image}
-            alt={product.name}
-            width={1200}
-            height={900}
-            className="h-full w-full object-cover"
-          />
+        <div className="flex flex-col gap-3">
+          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+            <img
+              src={gallery[active]}
+              alt={`${product.name} — view ${active + 1}`}
+              width={1200}
+              height={900}
+              className="h-full w-full object-cover"
+            />
+          </div>
+          {gallery.length > 1 && (
+            <div className="grid grid-cols-4 gap-3">
+              {gallery.map((src: string, i: number) => (
+                <button
+                  key={src + i}
+                  type="button"
+                  onClick={() => setActive(i)}
+                  aria-label={`View image ${i + 1}`}
+                  className={`aspect-[4/3] overflow-hidden rounded-lg border bg-muted transition-all ${
+                    active === i
+                      ? "border-accent ring-2 ring-accent/40"
+                      : "border-border hover:border-accent/60"
+                  }`}
+                >
+                  <img
+                    src={src}
+                    alt={`${product.name} thumbnail ${i + 1}`}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         <div className="flex flex-col justify-center">
           <span className="text-xs uppercase tracking-[0.2em] text-accent">Product</span>

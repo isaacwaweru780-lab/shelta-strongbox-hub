@@ -8,7 +8,9 @@ import {
   BriefcaseBusiness,
   ArrowRight,
 } from "lucide-react";
-import factoryImg from "@/assets/factory.jpg.asset.json";
+import factoryStock from "@/assets/factory-stock.jpg.asset.json";
+import factoryLine from "@/assets/factory-line.jpg.asset.json";
+import factoryMachine from "@/assets/factory-machine.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -60,15 +62,33 @@ function AboutPage() {
 
       <section className="mx-auto max-w-7xl px-4 py-16 md:px-8 md:py-24">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-          <div className="overflow-hidden rounded-2xl">
-            <img
-              src={factoryImg.url}
-              alt="Inside the Shelta Packaging factory"
-              width={1400}
-              height={900}
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
+          <div className="grid grid-cols-2 gap-3">
+            <div className="col-span-2 overflow-hidden rounded-2xl">
+              <img
+                src={factoryLine.url}
+                alt="Shelta Packaging production line"
+                width={1400}
+                height={900}
+                loading="lazy"
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <img
+                src={factoryStock.url}
+                alt="Kraft board stock at Shelta Packaging"
+                loading="lazy"
+                className="h-56 w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-xl">
+              <img
+                src={factoryMachine.url}
+                alt="Carton manufacturing machinery"
+                loading="lazy"
+                className="h-56 w-full object-cover"
+              />
+            </div>
           </div>
           <div className="prose prose-neutral max-w-none text-muted-foreground">
             <p>
