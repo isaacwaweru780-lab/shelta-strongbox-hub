@@ -3,8 +3,10 @@ import diecut from "@/assets/diecut.jpg.asset.json";
 import sfk from "@/assets/sfk.jpg.asset.json";
 import trays from "@/assets/trays.jpg.asset.json";
 import dividers from "@/assets/dividers.jpg.asset.json";
-
-
+import horticulture from "@/assets/horticulture.jpg.asset.json";
+import factoryStock from "@/assets/factory-stock.jpg.asset.json";
+import factoryLine from "@/assets/factory-line.jpg.asset.json";
+import factoryMachine from "@/assets/factory-machine.jpg.asset.json";
 
 export interface Product {
   slug: string;
@@ -13,6 +15,7 @@ export interface Product {
   description: string;
   uses: string[];
   image: string;
+  gallery: string[];
 }
 
 export const products: Product[] = [
@@ -24,6 +27,7 @@ export const products: Product[] = [
       "Our Regular Slotted Cartons are manufactured from high-grade kraft liners in both 3-ply and 5-ply constructions. All four flaps are equal size and meet at the centre, sealing cleanly with tape or glue. Efficient to produce, easy to pack, and reliable through storage, stacking and long-distance transit.",
     uses: ["Food & beverage", "Pharmaceuticals", "Soap & oil companies", "FMCG distribution", "Export"],
     image: rsc.url,
+    gallery: [rsc.url, factoryStock.url, factoryLine.url, diecut.url],
   },
   {
     slug: "carton-trays",
@@ -33,6 +37,7 @@ export const products: Product[] = [
       "Shallow open-top carton trays designed for stacking, display and quick packing lines. Ideal where visibility of the product matters or where cartons are grouped on a pallet.",
     uses: ["Fresh produce", "Retail display", "Bottled goods", "Manufacturing lines"],
     image: trays.url,
+    gallery: [trays.url, horticulture.url, factoryLine.url, diecut.url],
   },
   {
     slug: "die-cut-horticulture-boxes",
@@ -41,7 +46,8 @@ export const products: Product[] = [
     description:
       "Purpose-built for Kenya's horticulture sector, our die-cut boxes feature carefully placed ventilation, moisture-resistant liners, and rigid stacking strength — cut to your exact spec to keep flowers, vegetables and fruit in perfect condition from farm to airport to overseas buyer.",
     uses: ["Cut flowers", "Fresh vegetables", "Fruit exports", "Cold-chain shipments", "Branded retail"],
-    image: diecut.url,
+    image: horticulture.url,
+    gallery: [horticulture.url, diecut.url, trays.url, factoryMachine.url],
   },
   {
     slug: "sfk-kraft-paper",
@@ -51,6 +57,7 @@ export const products: Product[] = [
       "We supply SFK (semi-extensible kraft) and standard kraft paper in bulk rolls for wrapping, void fill, interleaving and secondary packaging. Sourced and produced to consistent grammage and tear-strength standards.",
     uses: ["Wrapping & interleaving", "Void fill", "Secondary packaging", "Industrial protection"],
     image: sfk.url,
+    gallery: [sfk.url, factoryStock.url, factoryMachine.url, rsc.url],
   },
   {
     slug: "carton-dividers",
@@ -60,8 +67,8 @@ export const products: Product[] = [
       "Precision-slotted dividers and partitions that lock inside your carton to separate bottles, jars and fragile items. Reduces breakage and helps orderly packing.",
     uses: ["Bottled beverages", "Glassware", "Jars & cosmetics", "Fragile electronics"],
     image: dividers.url,
+    gallery: [dividers.url, diecut.url, factoryLine.url, rsc.url],
   },
 ];
-
 
 export const getProduct = (slug: string) => products.find((p) => p.slug === slug);
